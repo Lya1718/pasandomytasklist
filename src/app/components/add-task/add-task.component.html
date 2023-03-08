@@ -1,0 +1,46 @@
+<!-- Se llama al método ngSubmit() cuando se activa el evento 'submit' en ngForm.
+sintaxis <form (ngSubmit)='función($event)'></form> 
+sirve para reconocer cuándo se hace click en el botón submit
+tenemos que declarar una función por si se hizo click o no-->
+
+<form class="add-form" 
+    (ngSubmit)="onSubmit()"
+    *ngIf="showAddTask"
+>
+    <div class="form-control">
+        <label for="text">
+            Task
+        </label>
+        <input type="text" 
+            name="text" 
+            id="text" 
+            placholder="Add Task Text"
+            [(ngModel)]="text"
+        >
+    </div>
+    <div class="form-control">
+        <label for="day">
+            Day & Time
+        </label>
+        <input type="text" 
+            name="day" 
+            id="day" 
+            placholder="Add Day & Time"
+            [(ngModel)]="day"
+        >
+    </div>
+    <div class="form-control form-control-check">
+        <label for="reminder">
+            Reminder
+        </label>
+        <input type="checkbox" 
+            name="reminder" 
+            id="reminder" 
+            placholder="Add Reminder"
+            [(ngModel)]="reminder"
+        >
+    </div>
+    <input type="submit" 
+        value="Save Task" 
+        class="btn btn-block">
+</form>

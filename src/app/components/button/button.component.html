@@ -1,0 +1,11 @@
+<!-- genero un componente para el botón -->
+<!-- agregamos propiedades de estilo y nos vamos a .ts para hacer que nuestros
+parámetros reciban algo-->
+<!-- (click) cuando está entre paréntesis es un evento -->
+<button 
+    class="btn" 
+    [ngStyle]="{'background-color': color}"
+    (click)="onClick()"
+>
+    {{ text }}
+</button>

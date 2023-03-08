@@ -1,0 +1,17 @@
+<!-- genero un componente para el header -->
+<header>
+    <!-- usar la variable del titulo que creé en .ts -->
+    <h1>{{title}}</h1>
+    <!-- se pueden traer componentes <(..carpeta-componente)> y modificar las propiedades de ese componente-->
+    <!-- cuando se reciba esta accion, vamos a llamar a la función toggleAddTask, tenemos que crear esa funcion -->
+    <!-- si showAddTask es true, devuelve red, sino green -->
+    <!-- si estamos dentro de la ruta del componente, bien, sino
+    va a esconder el router, si estamos en la ruta recien inicializada
+    no lo va a mostrar -->
+    <app-button 
+        color="{{showAddTask ? 'red' : 'green'}}" 
+        text="{{showAddTask ? 'Close Task' : 'Add Task'}}" 
+        (btnClick)="toggleAddTask()"
+        *ngIf="hasRoute('/')"
+    ></app-button>
+</header>

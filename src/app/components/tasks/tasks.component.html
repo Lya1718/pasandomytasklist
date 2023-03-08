@@ -1,0 +1,19 @@
+<!-- desde el componente de la lista de tareas (tasks) vamos a ir montando el
+    componente de los items de la lista (tasks-item) que le vamos a ir pasando 
+ a la vez el array tarea (tasks) que declaramos en .ts
+ -->
+<!-- tasks es la lista de tareas que importamos, task es cada una de esas tareas -->
+<!-- vamos a ir montando tantos componentes de tipo tasks-item como tengamos en nuestra lista -->
+<app-add-task
+ (onAddTask)="addTask($event)"
+>
+</app-add-task>
+<app-tasks-item
+    *ngFor="let task of tasks"
+    [task]= "task"
+    (onDeleteTask)="deleteTask(task)"
+    (onToggleReminder)="toggleReminder(task)"
+>
+<!-- recibimos un onDeleteTask que cuando se reciba, va a ejecutar la función deleteTask,
+y va a recibir una task en su parámetro -->
+</app-tasks-item>

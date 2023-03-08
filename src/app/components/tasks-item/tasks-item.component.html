@@ -1,0 +1,25 @@
+<!-- nosotros queremos que se nos coloree la clase de
+reminder solo si este es verdadero -->
+<!-- dentro del ngClass vamos a poner la clase que queremos
+que se aplique a x etiqueta -->
+<!-- si le hacemos click a la tarea, para qhe sea reminder true o false
+creamos un método -->
+<div 
+    class="task"
+    [ngClass]="{reminder: task.reminder}"
+    (dblclick)="onToggle(task)"
+    >
+    <!-- dentro de este div recibiremos las propiedades de task. -->
+    <h3>{{task.text}} 
+        <!-- llamamos al icon y dentro le hacemos los cambios a las propiedades -->
+        <!-- para que se eliminen las tareas tenemos que llamar a una función
+        a través de un evento (click)="onDelete(task)" -->
+        <fa-icon 
+        [icon]="faTimes"
+        [ngStyle] = "{'color': 'red'}"
+        (click)="onDelete(task)"
+        >
+        </fa-icon>
+    </h3>
+    <p>{{task.day}}</p>
+</div>

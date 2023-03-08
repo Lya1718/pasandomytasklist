@@ -1,0 +1,7 @@
+/* este css es particular del componente header, no es global */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}

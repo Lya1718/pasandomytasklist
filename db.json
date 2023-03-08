@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "text": "Investigar sobre Java",
+      "day": "Jueves 17h",
+      "reminder": true,
+      "id": 9
+    },
+    {
+      "text": "Limpiar mi habitación",
+      "day": "Domingo 19h",
+      "reminder": false,
+      "id": 10
+    }
+  ]
+}
